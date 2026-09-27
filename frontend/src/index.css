@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root, [data-theme="dark"] {
+  --bg-body: #0a0d14;
+  --bg-gradient-1: rgba(99, 102, 241, 0.15);
+  --bg-gradient-2: rgba(217, 70, 239, 0.12);
+  --bg-gradient-3: rgba(59, 130, 246, 0.08);
+  
+  --bg-card: rgba(18, 24, 38, 0.75);
+  --bg-card-hover: rgba(26, 35, 56, 0.85);
+  --bg-inner-card: rgba(10, 14, 23, 0.6);
+  --bg-ai-card: rgba(15, 23, 42, 0.8);
+  
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-color-hover: rgba(255, 255, 255, 0.14);
+  --border-focus: #6366f1;
+  
+  --text-heading: #ffffff;
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+  --text-subtle: #cbd5e1;
+  --header-title-gradient: linear-gradient(to right, #ffffff, #94a3b8);
+  
+  --primary-glow: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+  --accent-emerald: #10b981;
+  --accent-blue: #3b82f6;
+  --accent-amber: #f59e0b;
+  --accent-rose: #f43f5e;
+  
+  --badge-online-bg: rgba(16, 185, 129, 0.15);
+  --badge-online-text: #34d399;
+  --badge-online-dot: #10b981;
+  
+  --badge-purple-bg: rgba(99, 102, 241, 0.2);
+  --badge-purple-text: #a5b4fc;
+  
+  --badge-blue-note-bg: rgba(59, 130, 246, 0.08);
+  --badge-blue-note-border: rgba(59, 130, 246, 0.2);
+  --badge-blue-note-text: #93c5fd;
+  
+  --table-header-color: #9ca3af;
+  --table-border-color: rgba(255, 255, 255, 0.08);
+  --table-row-border: rgba(255, 255, 255, 0.04);
+  --table-row-hover: rgba(255, 255, 255, 0.03);
+
+  --chart-tooltip-bg: #0f172a;
+  --chart-tooltip-border: #334155;
+  --chart-tooltip-text: #f8fafc;
+  --chart-axis-color: #94a3b8;
+
+  --panel-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+  
+  --toggle-bg: rgba(255, 255, 255, 0.06);
+  --toggle-btn-text: #94a3b8;
+}
+
+[data-theme="light"] {
+  --bg-body: #f8fafc;
+  --bg-gradient-1: rgba(99, 102, 241, 0.08);
+  --bg-gradient-2: rgba(217, 70, 239, 0.06);
+  --bg-gradient-3: rgba(59, 130, 246, 0.05);
+  
+  --bg-card: #ffffff;
+  --bg-card-hover: #ffffff;
+  --bg-inner-card: #f1f5f9;
+  --bg-ai-card: #f8fafc;
+  
+  --border-color: #e2e8f0;
+  --border-color-hover: #cbd5e1;
+  --border-focus: #6366f1;
+  
+  --text-heading: #0f172a;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --text-subtle: #475569;
+  --header-title-gradient: linear-gradient(to right, #0f172a, #475569);
+  
+  --primary-glow: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+  --accent-emerald: #059669;
+  --accent-blue: #2563eb;
+  --accent-amber: #d97706;
+  --accent-rose: #e11d48;
+  
+  --badge-online-bg: #dcfce7;
+  --badge-online-text: #047857;
+  --badge-online-dot: #10b981;
+  
+  --badge-purple-bg: #e0e7ff;
+  --badge-purple-text: #4338ca;
+  
+  --badge-blue-note-bg: #eff6ff;
+  --badge-blue-note-border: #bfdbfe;
+  --badge-blue-note-text: #1d4ed8;
+  
+  --table-header-color: #475569;
+  --table-border-color: #e2e8f0;
+  --table-row-border: #f1f5f9;
+  --table-row-hover: #f8fafc;
+
+  --chart-tooltip-bg: #ffffff;
+  --chart-tooltip-border: #cbd5e1;
+  --chart-tooltip-text: #0f172a;
+  --chart-axis-color: #64748b;
+
+  --panel-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+
+  --toggle-bg: #e2e8f0;
+  --toggle-btn-text: #64748b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  min-height: 100vh;
+  line-height: 1.5;
+  background-image: 
+    radial-gradient(at 0% 0%, var(--bg-gradient-1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, var(--bg-gradient-2) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, var(--bg-gradient-3) 0px, transparent 50%);
+  background-attachment: fixed;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Glassmorphism / Dashboard Containers */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  box-shadow: var(--panel-shadow);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel:hover {
+  border-color: var(--border-color-hover);
+}
+
+/* Form Styling */
+.form-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.form-input, .form-select {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--bg-inner-card);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  color: var(--text-heading);
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.form-input:focus, .form-select:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+  background: var(--bg-card);
+}
+
+.form-select option {
+  background-color: var(--bg-card);
+  color: var(--text-heading);
+}
+
+/* Channel Toggle Cards */
+.channel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 10px;
+}
+
+.channel-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: var(--bg-inner-card);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+  color: var(--text-main);
+}
+
+.channel-card:hover {
+  border-color: var(--border-color-hover);
+}
+
+.channel-card.active {
+  background: rgba(99, 102, 241, 0.15);
+  border-color: rgba(99, 102, 241, 0.5);
+  color: var(--text-heading);
+}
+
+.channel-card input[type="checkbox"] {
+  accent-color: #6366f1;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* Theme Toggle Control */
+.theme-toggle-container {
+  display: flex;
+  align-items: center;
+  background: var(--toggle-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 9999px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.theme-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  border: none;
+  background: transparent;
+  color: var(--toggle-btn-text);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle-btn:hover:not(.active) {
+  color: var(--text-heading);
+}
+
+.theme-toggle-btn.active {
+  background: var(--primary-glow);
+  color: #ffffff;
+  box-shadow: 0 2px 10px rgba(99, 102, 241, 0.35);
+}
+
+/* Primary Button */
+.btn-primary {
+  width: 100%;
+  padding: 14px 24px;
+  background: var(--primary-glow);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.4);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px -5px rgba(139, 92, 246, 0.5);
+  opacity: 0.95;
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Recommendation Badges */
+.badge-recommendation {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.rec-increase {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--accent-emerald);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.rec-maintain {
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--accent-blue);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.rec-monitor {
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--accent-amber);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.rec-reduce {
+  background: rgba(244, 63, 94, 0.15);
+  color: var(--accent-rose);
+  border: 1px solid rgba(244, 63, 94, 0.3);
+}
+
+.priority-high {
+  background: rgba(244, 63, 94, 0.15);
+  color: var(--accent-rose);
+  border: 1px solid rgba(244, 63, 94, 0.4);
+}
+
+.priority-medium {
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--accent-amber);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+/* Spinner Animation */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}

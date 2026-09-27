@@ -1,0 +1,11 @@
+Strategy_ID,Campaign_Type,Target_Audience,Channel_Used,Campaigns,Avg_ROI,Avg_Revenue,Avg_Conversions,Avg_Acquisition_Cost,Adjusted_Score,Recommended_Budget,Budget_Percentage,Expected_Impact_Score,Priority,Business_Recommendation
+1,SEO,Working Women,"WhatsApp, Instagram, YouTube",10,12.359,1051838.6,1992.7,160.707,0.49714421827631006,200000.0,20.0,1.0,High,Increase investment
+2,Social Media,Premium Shoppers,"Instagram, WhatsApp",16,6.3031250000000005,889674.9375,1739.8125,148.99125,0.4253424572446661,200000.0,20.0,0.8555715657710075,High,Increase investment
+3,Social Media,College Students,"Google, Email",22,7.746818181818182,741928.5,1317.1818181818182,227.06636363636363,0.4197880207777639,200000.0,20.0,0.8443988793297159,High,Increase investment
+4,Influencer,Youth,"Instagram, YouTube",21,7.01095238095238,752152.7142857143,1378.4285714285713,189.70857142857142,0.4141179475709993,100000.0,10.0,0.832993590887614,Medium,Maintain and monitor
+5,Paid Ads,Tier 2 City Customers,"Facebook, Email",21,6.646190476190476,817822.1428571428,1381.3809523809523,349.9661904761905,0.4085445727719836,50000.0,5.0,0.8217828102044158,Diversification,Maintain and monitor
+6,SEO,Premium Shoppers,"Email, Google",21,3.993809523809524,857413.7619047619,1675.952380952381,273.37,0.40719754504076716,50000.0,5.0,0.8190732790830708,Diversification,Use for diversification
+7,Influencer,Premium Shoppers,"YouTube, Email",22,6.152727272727273,724716.6363636364,1378.9545454545455,234.67681818181816,0.39734222330760693,50000.0,5.0,0.7992494103326095,Diversification,Maintain and monitor
+8,SEO,College Students,"Instagram, Google",25,4.9496,802577.8,1487.04,243.8884,0.3966665952244412,50000.0,5.0,0.7978903920471143,Diversification,Use for diversification
+9,Email,Premium Shoppers,"Google, YouTube",20,5.414,815834.5,1597.2,172.4275,0.3966513794321174,50000.0,5.0,0.7978597856520997,Diversification,Maintain and monitor
+10,Paid Ads,College Students,"YouTube, Google",22,4.923181818181818,827139.5909090909,1491.0,349.99363636363637,0.39571822793772654,50000.0,5.0,0.7959827619231981,Diversification,Use for diversification
